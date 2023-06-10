@@ -21,9 +21,9 @@ body {
 
 .app {
   background-color: #252d4a;
-  width: 450px;
-  min-height: 200px;
-  height: min-content;
+  height: 40vh;
+  width: 80vw;
+  /* height: min-content; */
   border-radius: 15px;
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
@@ -39,7 +39,7 @@ body {
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
-  width: 100%;
+  width: 50%;
   position: relative;
 }
 
@@ -105,4 +105,9 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+@media (max-width: 1250px) {
+button {
+  color:white;
+}
 }

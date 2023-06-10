@@ -7,76 +7,76 @@ export default function App() {
     {
       question: "Which country won the 2022 world cup?",
       options: [
-        { answerText: "France", isCorrect: false },
-        { answerText: "Argentina", isCorrect: true },
-        { answerText: "Morocco", isCorrect: false },
-        { answerText: "Italy", isCorrect: false },
+        { id:0,answerText: "France", isCorrect: false },
+        { id:1,answerText: "Argentina", isCorrect: true },
+        { id:3,answerText: "Morocco", isCorrect: false },
+        { id:4,answerText: "Italy", isCorrect: false },
       ],
     },
     {
       question: "In which country was the 2022 World Cup located?",
       options: [
-        { answerText: "Qatar", isCorrect: true },
-        { answerText: "Dubai", isCorrect: false },
-        { answerText: "China", isCorrect: false },
-        { answerText: "Russia", isCorrect: false },
+        { id:5,answerText: "Qatar", isCorrect: true },
+        { id:6,answerText: "Dubai", isCorrect: false },
+        { id:7,answerText: "China", isCorrect: false },
+        { id:8,answerText: "Russia", isCorrect: false },
       ],
     },
     {
       question:
         "Which national team did Cristiano Ronaldo represent in the 2022 FIFA World Cup?",
       options: [
-        { answerText: "Argentina", isCorrect: false },
-        { answerText: "Brazil", isCorrect: false },
-        { answerText: "Turkey", isCorrect: false },
-        { answerText: "Portugal", isCorrect: true },
+        { id:9,answerText: "Argentina", isCorrect: false },
+        { id:10,answerText: "Brazil", isCorrect: false },
+        { id:11,answerText: "Turkey", isCorrect: false },
+        { id:12,answerText: "Portugal", isCorrect: true },
       ],
     },
     {
       question:
         "Which national team did Mbappe represent in the 2022 FIFA World Cup??",
       options: [
-        { answerText: "France", isCorrect: true },
-        { answerText: "Colombia", isCorrect: false },
-        { answerText: "Peru", isCorrect: false },
-        { answerText: "Persia", isCorrect: false },
+        { id:13,answerText: "France", isCorrect: true },
+        { id:14,answerText: "Colombia", isCorrect: false },
+        { id:15,answerText: "Peru", isCorrect: false },
+        { id:16,answerText: "Persia", isCorrect: false },
       ],
     },
     {
       question: "Which country  play in the semi-finals 2022 world cup?",
       options: [
-        { answerText: "Morocco", isCorrect: true },
-        { answerText: "England", isCorrect: false },
-        { answerText: "Wales", isCorrect: false },
-        { answerText: "Italy", isCorrect: false },
+        { id:17,answerText: "Morocco", isCorrect: true },
+        { id:18,answerText: "England", isCorrect: false },
+        { id:19,answerText: "Wales", isCorrect: false },
+        { id:20,answerText: "Italy", isCorrect: false },
       ],
     },
     {
       question: "Who was the top goal scorer in the FIFA World Cup 2022?",
       options: [
-        { answerText: "Mbappe ", isCorrect: true },
-        { answerText: "Messi", isCorrect: false },
-        { answerText: "Lautrao Martinez", isCorrect: false },
-        { answerText: "Karim Benzama", isCorrect: false },
+        { id:21,answerText: "Mbappe ", isCorrect: true },
+        { id:22,answerText: "Messi", isCorrect: false },
+        { id:23,answerText: "Lautrao Martinez", isCorrect: false },
+        { id:24,answerText: "Karim Benzama", isCorrect: false },
       ],
     },
     {
       question: "Who was the top assist scorer in the FIFA World Cup 2022?",
       options: [
-        { answerText: "Bruno Fernandes", isCorrect: true },
-        { answerText: "Antonie Griezmann", isCorrect: false },
-        { answerText: "Ivan Perisic", isCorrect: false },
-        { answerText: "Hary Kane", isCorrect: false },
+        { id:25,answerText: "Bruno Fernandes", isCorrect: true },
+        { id:26,answerText: "Antonie Griezmann", isCorrect: false },
+        { id:27,answerText: "Ivan Perisic", isCorrect: false },
+        { id:28,answerText: "Hary Kane", isCorrect: false },
       ],
     },
     {
       question:
         "Which national team did Benzema represent in the 2022 FIFA World Cup?",
       options: [
-        { answerText: "France", isCorrect: false },
-        { answerText: "Morocco", isCorrect: false },
-        { answerText: "Italy", isCorrect: false },
-        { answerText: "He didnt join the tournament", isCorrect: true },
+        { id:29,answerText: "France", isCorrect: false },
+        { id:30,answerText: "Morocco", isCorrect: false },
+        { id:31,answerText: "Italy", isCorrect: false },
+        { id:32,answerText: "He didnt join the tournament", isCorrect: true },
       ],
     },
   ];
@@ -115,7 +115,7 @@ export default function App() {
           </div>
           <div className="answer-section">
             {questions[currentQuestion].options.map((mu) => (
-              <button onClick={() => handleNextQuestion(mu.isCorrect)}>
+              <button key={mu.id} onClick={() => handleNextQuestion(mu.isCorrect)}>
                 {mu.answerText}
               </button>
             ))}
